@@ -1,3 +1,5 @@
+
+
 # socket编程
 
 ## 协议
@@ -161,16 +163,17 @@ accept(); //阻塞监听客户端连接
 #include <sys/socket.h>
 int socket(int domain, int type, int protocol);
 // domain: AF_INET  AF_INET6  AF_UNIX
-// type: SOCK_STREAM  SOCK_DGRAM
-// protocol: 0
+// type: SOCK_STREAM  SOCK_DGRAM，流式协议 报式协议
+// protocol: 0，代表协议
+功能：创建一个套接字
 返回值：
     成功：新套接字对应的文件描述符
-    失败： -1 errno
+    失败： -1，设置 errno
 ```
 
 ```c
 int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
-// 给socket绑定一个 地址结构
+// 给socket绑定一个 地址结构：ip + port
 返回值：
     成功：0
     失败：-1 errno
@@ -208,15 +211,15 @@ addrlen: 服务器地址结构的长度
 
 ## TCP 通信流程
 
-<img src="https://user-images.githubusercontent.com/59153788/171345518-2b2e0486-0b72-46aa-8cbd-45dc87ceebd3.png" alt="image" style="zoom:80%;" />
+<img src="https://user-images.githubusercontent.com/59153788/171345518-2b2e0486-0b72-46aa-8cbd-45dc87ceebd3.png" alt="image" style="zoom: 67%;" />
 
 ```c
-bind()    //绑定ip+port;
+bind()    //绑定 ip + port;
 listen()  //设置监听上限，同时跟服务端建立连接的数量;
 accept()  //阻塞客户端连接 
 ```
 
 **共有三个套接字**
 
-
+ 
 
