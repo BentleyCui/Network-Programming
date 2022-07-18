@@ -4,25 +4,6 @@
 
 ## 协议
 
-协议
-
-分层模型结构：
-
-​		OSI七层模型
-
-​		TCP/IP 四层模型
-
-C/S 模型：
-
-​		client - server    缓存大量数据、协议选择灵活
-
-b/s 模型：
-
-​		browser - server
-
-网络传输流程：
-
-​		数据没有封装之前，不能在网络中传递
 
 **以太网帧协议：**
 
@@ -222,4 +203,5 @@ accept()  //阻塞客户端连接
 **共有三个套接字**
 
  
+![image](https://user-images.githubusercontent.com/59153788/179470282-283acc9a-c10a-43a0-964a-cbb45c029d61.png)
 
