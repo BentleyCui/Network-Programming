@@ -38,4 +38,3 @@ void FD_ZERO(fd_set *set);
 ![image](https://user-images.githubusercontent.com/59153788/179463289-4c9d2972-dcef-4970-91e6-683dd76b531e.png)
 
 
-![image-20220719155235245](C:\Users\cuibin\AppData\Roaming\Typora\typora-user-images\image-20220719155235245.png)
