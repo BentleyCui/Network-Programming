@@ -66,6 +66,9 @@ int poll(struct pollfd *fds, nfds_t nfds, int timeout);
 
 ### epoll
 
+![image](https://user-images.githubusercontent.com/59153788/179998898-cc7b2431-0162-4b8a-9fa6-880a1ae23b56.png)
+
+
 ```c++
 #include <sys/epoll.h> 
 // 创建一个新的epoll实例。在内核中创建了一个数据，这个数据中有两个比较重要的数据，一个是需要检 测的文件描述符的信息（红黑树），还有一个是就绪列表，存放检测到数据发送改变的文件描述符信息（双向 链表）。 
